@@ -54,4 +54,8 @@ MIT License.
 
 ## History
 
+* 2015.9.7 Version 1.0.1 Release.
+  Change how to get the script path.
+
 * 2015.9.7 Version 1.0 Release.
+  First commit.
