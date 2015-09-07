@@ -11,14 +11,11 @@ var scanf       = require('scanf');
 var copyDir     = require('copy-dir');
 
 
-fs.readlink(process.argv[1], function(err, linkString){
-    console.assert(err==null, "error : Can not get script path.");
-    if(err != null){ return; }
+(function(){
 
     var op = {};
 
-
-    op.scriptDir   = path.dirname(linkString);
+    op.scriptDir   = path.dirname(process.mainModule.filename);
     op.currentDir  = fs.realpathSync('./');
 
     console.log("\nTo setup the HTML5Boilerplate project from now!\n");
@@ -82,7 +79,7 @@ fs.readlink(process.argv[1], function(err, linkString){
             return;
         }
     }while(true);
-});
+})();
 
 
 function firepan(op){
