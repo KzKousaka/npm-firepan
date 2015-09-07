@@ -1,0 +1,24 @@
+{
+  "name": "firepan",
+  "version": "1.0.0",
+  "description": "Setup HTML5boilerplate , gulp , TypeScript , Sass",
+  "preferGlobal": true,
+  "bin": {
+    "firepan": "firepan.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    ""
+  ],
+  "author": "Kazuma Kousaka",
+  "license": "MIT",
+  "dependencies": {
+    "copy-dir": "0.0.7",
+    "request": "^2.61.0",
+    "scanf": "^0.6.3",
+    "unzip": "^0.1.11"
+  },
+  "devDependencies": {}
+}
