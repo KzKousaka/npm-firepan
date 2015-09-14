@@ -12,12 +12,12 @@ gulp.task('ts', function () {
         .pipe(ts(tsConfig.compilerOptions))
         .pipe(webpack(webpackTsConfig));
 
-    return tsResult.pipe(gulp.dest('./public/js'));
+    return tsResult.pipe(gulp.dest('./dest/js'));
 });
 
 gulp.task('sass', function(){
     return sass('sass/', { style : 'expanded' })
-        .pipe(gulp.dest('./public/'));
+        .pipe(gulp.dest('./dest/'));
 });
 
 gulp.task('watch', function () {
