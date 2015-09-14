@@ -57,30 +57,6 @@ var copyDir     = require('copy-dir');
     process.stdout.write("\nWho is the author? : ");
     op.author = scanf('%s');
 
-
-    /*
-    console.log("\nUsing what language?");
-    console.log("[ts] TypeScript");
-    // console.log("[cf] CoffeeScript");
-    console.log("[no] Unused.");
-    do{
-        var loop = true;
-        process.stdout.write("language : ");
-        var lang = scanf("%s");
-        switch (lang) {
-        case "ts":
-            op.lang = "ts"; loop = false;
-            break;
-        // case "cf":
-        //     op.lang = "cf"; loop = false;
-        //     break;
-        case "no":
-            op.lang = ""; loop = false;
-            break;
-        }
-    }while(loop);
-    */
-
     console.log("\nDo you use any type?");
     console.log("[c] Clasic HTML5Boilerplate");
     console.log("[r] Responsive");
