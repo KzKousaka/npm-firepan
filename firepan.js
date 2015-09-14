@@ -1,5 +1,11 @@
 #!/usr/bin/env node
 
+var VERSION_MESSAGE = "\n/*\n"+
+" * npm-firepan v1.0.1 \n"+
+" *\n"+
+" * https://github.com/kazu1107/npm-firepan\n"+
+" */\n"
+
 var sys         = require('sys');
 var fs          = require('fs');
 var path        = require('path');
@@ -10,13 +16,38 @@ var unzip       = require('unzip');
 var scanf       = require('scanf');
 var copyDir     = require('copy-dir');
 
-
 (function(){
 
     var op = {};
 
     op.scriptDir   = path.dirname(process.mainModule.filename);
     op.currentDir  = fs.realpathSync('./');
+
+    for(var i = 2 ; i < process.argv.length ; i++){
+        var param = process.argv[i]
+
+        switch (param) {
+            case "-v":
+            case "--version":
+                console.log(VERSION_MESSAGE);
+                return;
+            case "-h":
+            case "--help":
+                console.log(
+                    "\nEnter the command in place to put the project directory.\n\n"+
+                    " * What's project name? : [YOUR PROJECT NAME]\n"+
+                    " * Who is the author? : [AUTHOR NAME]\n"+
+                    " * Do you use any type?\n"+
+                    " * [c] Clasic HTML5Boilerplate\n"+
+                    " * [r] Responsive\n"+
+                    " * [b] Bootstrap\n"+
+                    " * [n] no HTML5Boilerplate\n"+
+                    " * type : [SELECT ( c / r / b / n ) ]\n");
+                return;
+            default:
+        }
+    }
+
 
     console.log("\nTo setup the HTML5Boilerplate project from now!\n");
 
