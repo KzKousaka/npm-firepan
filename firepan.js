@@ -108,7 +108,7 @@ function firepan(op){
                         fs.rename( path.join(projDir, "initializr"), path.join(projDir, "dest"));
                         fs.unlink(output);
 
-                        execSync("npm install --save-dev gulp gulp-typescript gulp-webpack gulp-ruby-sass ts-loader");
+                        execSync("npm install --save-dev gulp gulp-typescript gulp-webpack gulp-ruby-sass ts-loader webpack");
 
                         process.chdir( './src' );
                         execSync("tsd init");
