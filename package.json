@@ -1,6 +1,6 @@
 {
   "name": "firepan",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Setup HTML5boilerplate , gulp , TypeScript , Sass",
   "preferGlobal": true,
   "bin": {
@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    ""
+    "boilerplate,htm5,gulp,bower,typescript,sass"
   ],
   "author": "Kazuma Kousaka",
   "license": "MIT",

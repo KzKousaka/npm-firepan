@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 var VERSION_MESSAGE = "\n/*\n"+
-" * npm-firepan v1.0.1 \n"+
+" * npm-firepan v1.0.2 \n"+
 " *\n"+
 " * https://github.com/kazu1107/npm-firepan\n"+
 " */\n"
@@ -73,11 +73,11 @@ var copyDir     = require('copy-dir');
             firepan(op);
             return;
         case 'r':
-            op.initializr = "http://www.initializr.com/builder?izr-responsive&jquerymin&h5bp-iecond&h5bp-analytics&h5bp-favicon&h5bp-appletouchicons&modernizrrespond&h5bp-css&h5bp-csshelpers&h5bp-mediaqueryprint&izr-emptyscript"
+            op.initializr = "http://www.initializr.com/builder?izr-responsive&jquerymin&h5bp-iecond&h5bp-analytics&h5bp-favicon&h5bp-appletouchicons&modernizrrespond&h5bp-css&h5bp-csshelpers&h5bp-mediaqueryprint&izr-emptyscript";
             firepan(op);
             return;
         case 'b':
-            op.initializr = "http://www.initializr.com/builder?boot-hero&jquerymin&h5bp-iecond&h5bp-analytics&h5bp-favicon&h5bp-appletouchicons&modernizrrespond&izr-emptyscript&boot-css&boot-scripts"
+            op.initializr = "http://www.initializr.com/builder?boot-hero&jquerymin&h5bp-iecond&h5bp-analytics&h5bp-favicon&h5bp-appletouchicons&modernizrrespond&izr-emptyscript&boot-css&boot-scripts";
             firepan(op);
             return;
         case 'n':
@@ -104,11 +104,11 @@ function firepan(op){
     // download
     if(op.initializr != ""){
         var output = path.join( projDir, "__TEMP_ARCHIVE__.zip");
+
         request({url: op.initializr , encoding: null}, function(err, resp, body) {
             if(err) throw err;
             fs.writeFile(output, body, function(err) {
                 console.log("\nsetup directory ...");
-
                 fs.createReadStream(output)
                     .pipe(unzip.Extract({ path: projDir }))
                     .on('close', function(){
@@ -121,7 +121,7 @@ function firepan(op){
                         execSync("tsd init");
                         execSync("tsd query jquery --save --resolve --action install");
                         process.chdir('..');
-                    })
+                    });
             });
         });
     }

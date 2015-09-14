@@ -27,22 +27,47 @@ At the same time, we will setup these tools.
     ```
 
 ## How to use
-Enter the command in place to put the project directory.
 
-```plane
-$ firepan
-What's project name? : **YOUR PROJECT NAME**
+1. Enter the command in place to put the project directory.  
 
-Who is the author? : **AUTHOR NAME**
+    ```plane
+    $firepan
+    What’s project name? : [YOUR PROJECT NAME]
 
-Do you use any type?
-[c] Clasic HTML5Boilerplate
-[r] Responsive
-[b] Bootstrap
-[n] no HTML5Boilerplate
-type : ** SELECT ( c / r / b / n ) **
+    Who is the author? : [AUTHOR NAME]
 
-```
+    Do you use any type?
+    [c] Clasic HTML5Boilerplate
+    [r] Responsive
+    [b] Bootstrap
+    [n] no HTML5Boilerplate
+    type : [ SELECT ( c / r / b / n ) ]
+    ```
+
+2. Let's check Gulp.
+
+    ```plane
+    $ cd [YOUR PROJECT NAME]  
+    $ gulp watch
+    ```
+
+    If successful,then output as follows.
+    ```plane
+    [17:20:33] Using gulpfile ~/Desktop/test/project/gulpfile.js
+    [17:20:33] Starting 'ts'...
+    [17:20:34] Starting 'watch'...
+    [17:20:34] Finished 'watch' after 9.89 ms
+    ts-loader: Using typescript@1.5.3 and /Users/****/Desktop/test/project/src/tsconfig.json
+    [17:20:35] Version: webpack 1.12.1
+      Asset     Size  Chunks             Chunk Names
+    main.js  1.81 kB       0  [emitted]  main.js
+    [17:20:35] Finished 'ts' after 1.99 s
+    [17:20:35] Starting 'default'...
+    [17:20:35] Finished 'default' after 5.95 μs
+    ```
+
+
+
 
 
 ## Reference links (Some script reference)
@@ -54,7 +79,11 @@ MIT License.
 
 ## History
 
-* 2015.9.7 Version 1.0.1 Release.
+* 2015.9.14 Version 1.0.2 Release.  
+  Add command `-h` (`--help`), `-v` ( `--version`)  
+  Remove comment of Japanese.
+
+* 2015.9.7 Version 1.0.1 Release.  
   Change how to get the script path.
 
 * 2015.9.7 Version 1.0 Release.
