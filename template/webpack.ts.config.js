@@ -2,29 +2,27 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-    // エントリーポイント
+    // Entry Position
     entry:{
         'main.js':'./src/main.ts'
     },
-    // 出力先
-    // dest: './public/js',
-    // 出力するファイル名
+
     output: {
         filename: '[name]',
         publicPath: './public/js/'
     },
-    // 依存関係
+    // Dependency
     resolve: {
         root:[path.join(__dirname, 'bower_components')],
         extensions:['', '.webpack.js', 'web.js', '.js', '.ts']
     },
-    // bowerで取得したライブラリの読み込み用プラグイン
+    // bower-plugin
     plugins: [
         new webpack.ResolverPlugin(
             new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin('bower.json', ['main'])
         )
     ],
-    // TypeScriptを読み込むためのloader
+    // ts-loader
     module: {
         loaders: [
             { test: /\.ts$/, loader: 'ts-loader' }
