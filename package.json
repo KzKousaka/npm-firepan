@@ -1,6 +1,6 @@
 {
   "name": "firepan",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Setup HTML5boilerplate , gulp , TypeScript , Sass",
   "preferGlobal": true,
   "bin": {

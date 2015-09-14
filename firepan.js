@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 var VERSION_MESSAGE = "\n/*\n"+
-" * npm-firepan v1.0.2 \n"+
+" * npm-firepan v1.0.3 \n"+
 " *\n"+
 " * https://github.com/kazu1107/npm-firepan\n"+
 " */\n"

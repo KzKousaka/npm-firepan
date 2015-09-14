@@ -79,9 +79,10 @@ MIT License.
 
 ## History
 
-* 2015.9.14 Version 1.0.2 Release.  
+* 2015.9.14 Version 1.0.3 Release.  
   Add command `-h` (`--help`), `-v` ( `--version`)  
   Remove comment of Japanese.
+  Fix dest path name.
 
 * 2015.9.7 Version 1.0.1 Release.  
   Change how to get the script path.
